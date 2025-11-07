@@ -1,0 +1,35 @@
+import type { ReactNode } from "react";
+import React from "react";
+
+export const EditIcon = ({
+  fill = "currentColor",
+  filled,
+  size,
+  height,
+  width,
+  ...props
+}: {
+  fill?: string;
+  filled?: boolean;
+  size?: string;
+  height?: number;
+  width?: number;
+}): ReactNode => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 19 18"
+      fill={filled ? fill : "none"}
+      width={size || width || 19}
+      height={size || height || 18}
+      {...props}
+    >
+      <path
+        d="M12 3.00019L15 6.00019M10 17.0002H18M2 13.0002L1 17.0002L5 16.0002L16.586 4.41419C16.9609 4.03913 17.1716 3.53051 17.1716 3.00019C17.1716 2.46986 16.9609 1.96124 16.586 1.58619L16.414 1.41419C16.0389 1.03924 15.5303 0.828613 15 0.828613C14.4697 0.828613 13.9611 1.03924 13.586 1.41419L2 13.0002Z"
+        stroke="black"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
